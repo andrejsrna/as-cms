@@ -12,7 +12,9 @@
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
-    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "create-admin": "node scripts/create-admin.js",
+    "reset-password": "node scripts/reset-password.js"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.9.0",
@@ -20,9 +22,10 @@
     "@payloadcms/payload-cloud": "3.9.0",
     "@payloadcms/richtext-lexical": "3.9.0",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
     "graphql": "^16.8.1",
     "next": "15.1.0",
-    "payload": "3.9.0",
+    "payload": "^3.9.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "sharp": "^0.33.5"
