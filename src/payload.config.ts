@@ -27,15 +27,7 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  cors: {
-    origin: [
-      'https://andrejsrna.sk',
-      'https://admin.andrejsrna.sk',
-      'http://localhost:3000',
-      'http://localhost:3001'
-    ],
-    credentials: true,
-  },
+  cors: '*',
   csrf: [
     'https://andrejsrna.sk',
     'https://admin.andrejsrna.sk',
