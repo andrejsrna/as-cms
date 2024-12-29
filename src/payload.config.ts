@@ -27,17 +27,20 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  cors: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'https://andrejsrna.sk',
-    // Add any other domains you need
-  ],
+  cors: {
+    origin: [
+      'https://andrejsrna.sk',
+      'https://admin.andrejsrna.sk',
+      'http://localhost:3000',
+      'http://localhost:3001'
+    ],
+    credentials: true,
+  },
   csrf: [
-    'http://localhost:3000',
-    'http://localhost:3001',
     'https://andrejsrna.sk',
-    // Add any other domains you need
+    'https://admin.andrejsrna.sk',
+    'http://localhost:3000',
+    'http://localhost:3001'
   ],
   db: postgresAdapter({
     pool: {
