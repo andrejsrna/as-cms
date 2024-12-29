@@ -27,18 +27,6 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  cors: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'https://andrejsrna.sk',
-    // Add any other domains you need
-  ],
-  csrf: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'https://andrejsrna.sk',
-    // Add any other domains you need
-  ],
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
