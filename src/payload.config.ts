@@ -44,4 +44,9 @@ export default buildConfig({
     payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
+  upload: {
+    limits: {
+      fileSize: 5000000, // 5MB, adjust as needed
+    },
+  },
 })
